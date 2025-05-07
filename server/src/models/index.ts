@@ -1,4 +1,3 @@
-import { IWord, Word } from './Word.js';
-import { IGame, Game } from './Game.js';
+import Question from './Question.js';
 
-export { IWord, Word, IGame, Game };
+export default { Question };

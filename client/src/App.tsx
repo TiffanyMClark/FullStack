@@ -1,18 +1,9 @@
-import './App.css';
-import { Outlet } from 'react-router-dom';
-
-import Header from './components/Header';
-import Footer from './components/Footer';
-
+import Quiz from './components/Quiz';
 
 function App() {
   return (
-    <div className="flex-column justify-flex-start min-100-vh">
-      <Header />
-      <div className="container">
-        <Outlet />
-      </div>
-      <Footer />
+    <div className="App">
+      <Quiz />
     </div>
   );
 }
