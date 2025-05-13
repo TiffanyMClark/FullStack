@@ -23,12 +23,19 @@ jobs:
       - name: Use Node.js 21.x
         uses: actions/setup-node@v1
         with:
-          node-version: 21.x
+          node-version:
+            21.x
+
+            # start the backend server?
+      - name: Start the server
+        run: |
+          cd server && npm start &  # Start server in the background
+          sleep 10  # Wait for the server to fully start
 
       # Install dependencies
       - name: 🧰 Install Deps
         run: npm install
-        
+
       # Run lint
       - name: Run Lint
         run: npm run lint
