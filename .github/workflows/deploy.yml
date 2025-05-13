@@ -18,7 +18,14 @@ jobs:
     # Define the steps to be executed in the job
     steps:
       # Checkout the code from the repository
-      - uses: actions/checkout@v3
+      - uses:
+          actions/checkout@v3
+
+          # start the backend server?
+      - name: Start the server
+        run: |
+          cd server && npm start &  # Start server in the background
+          sleep 10  # Wait for the server to fully start
 
       # Define a step named "Test"
       - name: Test
