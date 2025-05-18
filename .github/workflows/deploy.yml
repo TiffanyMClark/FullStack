@@ -24,14 +24,6 @@ jobs:
         # Run install
         run: npm install
 
-      - name: Building
-        # Run the build script
-        run: npm run build
-
-      - name: Server Start
-        # Start the server in the background
-        run: npm run start
-
       # Run tests
       - name: Run Tests
         run: npm run test-component
