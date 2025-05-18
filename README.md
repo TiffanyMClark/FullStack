@@ -1,31 +1,70 @@
-# 🏗️ Deploy a Full-Stack App to Render
+# TechQuiz
 
-Work with a partner to implement the following user story:
+This is a full-stack application that runs test cases when a Pull Request is made to the develop branch and automatically deploys to Render when the code is merged to main.
 
-* As a business owner, I want to connect a database to my deployed web app so that users can save their game progress.
+## Table of Contents
 
-## Acceptance Criteria
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Installation](#installation)
+4. [Cypress Testing](#cypress-testing)
+5. [Development Workflow](#development-workflow)
+6. [GitHub](#github)
 
-* It's done when the app is stored in a GitHub repository.
+## Features
 
-* It's done when the app is deployed to Render and accessible from a URL.
+- Add and seed questions into a MongoDB database
 
-* It's done when the MongoDB Atlas database is created and connected to the Render app.
+- Frontend displays quiz questions and options
 
----
+- Tracks correct answers
 
-## 💡 Hints
+- Responsive design
 
-* If you get stuck, reference the existing blog posts and guides from previous activities.
+## Tech Stack
 
-## 🏆 Bonus
+- Frontend: React, TypeScript
 
-If you have completed this activity, review the following challenge with your partner:
+- Backend: Node.js, Express, TypeScript
 
-* How do we seed an Atlas database with starting data?
+- Database: MongoDB Atlas
 
-Use [Google](https://www.google.com) or another search engine to research this.
+- CI/CD: GitHub Actions
 
----
+- Testing: Cypress Component Testing
 
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Installation
+
+- git clone https://github.com/TiffanyMClark/FullStack
+
+- cd your-repo
+
+- npm install
+
+- npm run build
+
+- npm start
+
+- npm run seed
+
+## Cypress Testing
+
+Tests are run automatically when you push to develop. If all tests pass, you may merge to main.
+
+## Development Workflow
+
+1. Create feature branches off develop
+
+2. Submit PRs to develop
+
+3. Cypress tests run via GitHub Actions
+
+4. After successful tests, merge to main
+
+5. GitHub Action triggers auto-deployment to Render
+
+## GitHub
+
+https://github.com/TiffanyMClark/FullStack
+
+https://fullstack1-gc8f.onrender.com/
