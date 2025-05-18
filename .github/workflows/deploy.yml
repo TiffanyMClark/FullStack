@@ -3,8 +3,6 @@ name: Deploy
 
 # Trigger the workflow on push and pull request events to the main branch
 on:
-  push:
-    branches: [main]
   pull_request:
     branches:
       - main
@@ -18,14 +16,17 @@ jobs:
     # Define the steps to be executed in the job
     steps:
       # Checkout the code from the repository
-      - uses: actions/checkout@v3
+      - name: Checkout code from Git
+        # Use the checkout action to get the code
+        uses: actions/checkout@v3
 
-      # Define a step named "Test"
-      - name: Test
-        # Run install and test scripts
-        run: |
-          npm install
-          npm run test
+      - name: Install
+        # Run install
+        run: npm install
+
+      # Run tests
+      - name: Run Tests
+        run: npm run test-component
 
       # Define a step named "Deploy"
       - name: Deploy
